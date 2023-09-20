@@ -16,7 +16,7 @@
 
 //         stage('build image'){
 //             steps{
-//                 sh "docker built -t bhuvirepo ."
+//                 sh "docker build -t bhuvirepo ."
 //             }
 //         }
 
