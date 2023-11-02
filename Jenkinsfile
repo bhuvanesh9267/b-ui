@@ -40,7 +40,7 @@ pipeline{
 
         stage('store image value to ssm'){
             steps{
-                sh "aws ssm put-parameter --name ECR/bhuviecr --value 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:latest --type String --overwrite"
+                sh "aws ssm put-parameter --name ECR/bhuviecr --value 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:latest --type String --region ap-south-1 --overwrite"
             }
         }
     }
