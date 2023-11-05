@@ -9,7 +9,7 @@ pipeline{
 
         stage('tag image'){
             steps{
-                sh "docker tag bhuviecr:latest 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:1.1"
+                sh "docker tag bhuviecr:latest 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:1.2"
             }
         }
 
@@ -21,13 +21,13 @@ pipeline{
 
         stage('push image'){
             steps{
-                sh "docker push 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:1.1"
+                sh "docker push 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:1.2"
             }
         }
 
         stage('store image value to ssm'){
             steps{
-                sh "aws ssm put-parameter --name /ECR/bhuviecr --value 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:1.1 --type String --region ap-south-1 --overwrite"
+                sh "aws ssm put-parameter --name /ECR/bhuviecr --value 837016921632.dkr.ecr.ap-south-1.amazonaws.com/bhuviecr:1.2 --type String --region ap-south-1 --overwrite"
             }
         }
     }
