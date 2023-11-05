@@ -1,19 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage('describe repositories'){
-            steps{
-                sh "aws ecr describe-repositories --region 'ap-south-1'"
-            }
-        }
-
-        stage('clone repo'){
-            steps{
-                git credentialsId: "github", url:'https://github.com/bhuvanesh9267/b-ui'
-            }
-            
-        }
-
         stage('build image'){
             steps{
                 sh "docker build -t bhuviecr ."
