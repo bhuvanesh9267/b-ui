@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('build image'){
             steps{
-                sh "sudo docker build -t bhuviecr ."
+                sh "docker build -t bhuviecr ."
             }
         }
 
