@@ -31,11 +31,11 @@ pipeline{
         //     }
         // }
 
-        // stage('push image to docker hub'){
-        //     steps{
-        //         sh "sudo docker push bhuvaneshs512/myimage5:1.1"
-        //     }
-        // }
+        stage('push image to docker hub'){
+            steps{
+                sh "sudo docker push bhuvaneshs512/freecss:1.1"
+            }
+        }
             
     }
 }
