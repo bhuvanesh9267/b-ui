@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('build image'){
             steps{
-                sh "docker build -t bhuviecr ."
+                sh "docker build -t bhuvaneshs512/freecss:1.2 ."
             }
         }
 
