@@ -33,7 +33,7 @@ pipeline{
 
         stage('push image to docker hub'){
             steps{
-                sh "docker push bhuvaneshs512/freecss:1.1"
+                sh "docker push bhuvaneshs512/freecss:1.2"
             }
         }
             
